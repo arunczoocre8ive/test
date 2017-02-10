@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>Welcome | Rokk3rlabes</title>
+        <link rel="icon" href="favicon.png" type="image/png" />
+        <!--[if lt IE 9]><script src="js/IEupdate.js" type="text/javascript"></script><![endif]-->
+        <script src="js/angular.js"></script>
+        <script src="js/app/controller.js"></script>
+        <script src="js/highcharts.js"></script>
+        <script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+        <script src="js/custom_scripts.js" type="text/javascript"></script>
+        <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+        <script src="js/d3pie-master/d3pie/d3pie.min.js"></script>
+        <link type="text/css" href="css/styles.css" rel="stylesheet" media="all" />
+
+    </head>
+
+    <body  ng-controller="myController">
+
+        <div class="container">
+
+            <div class="pageHeader">
+                <a href="javascript:void(0)" title="Rokk3rlabes" class="pageLogo">
+                    <img src="images/logo.png" alt="Rokk3rlabes"> 
+                </a>
+
+                <a href="javascript:void(0)" title="" class="btnSettings">Admin Name</a>
+            </div>
+
+            <div class="pageContent">
+                <div class="navHolder">
+                    <h3>NAVIGATE</h3>
+
+                    <ul class="pageNav">
+                        <li class="btnAnalytics"><a href="javascript:void(0)">Analytics</a></li>
+                        <li  class="btnNews"><a href="javascript:void(0)">News</a></li>
+                        <li class="btnBoard"><a href="javascript:void(0)">Board Brief</a></li>
+                        <li class="btnBriefcase"><a href="javascript:void(0)">Briefcase</a></li>
+                        <li class="btnNavClose"><a href="javascript:void(0)">Close Menu</a></li>
+                    </ul>
+                </div>
+
+                <div class="pageContentHolder">
+                    <a class="btnMobNav" title="Nav" href="javascript:void(0)"></a>
+                    <div class="commonDataHolder">
+                        <div id="graph">Placeholder for chart</div>
+                    </div>
+
+                    <div class="countHolder">
+                        <div class="commonDataHolder">
+                             <div id="chart2"></div>
+                             <div class="chart2Info">
+                                1.	{{zoneId[0]}} <br>
+                                2.	{{zoneId[1]}} <br>
+                                3.	{{zoneId[2]}} <br>
+                                4.	{{zoneId[3]}} <br>
+                                5.	{{zoneId[4]}}
+                             </div>
+                        </div>
+                    </div>
+
+                    <div class="commonDataHolder speedAverage">
+                        <div class="employeeChart">
+							    <figure>
+							        <!--<img src="images/iconEmployee14sm.png">-->
+							        <div id="pieChartReview"></div>							
+							    </figure>
+							    <div class="teskListStatus">
+							        <ul>
+							            <li class="pending"><span></span><label>{{zoneId[0]}}</label></li>
+							            <li class="completedOnTime"><span></span><label>{{zoneId[1]}}</label></li>
+							            <li class="ongoing"><span></span><label>{{zoneId[2]}}</label></li>
+							            <li class="completedDelay"><span></span><label>{{zoneId[3]}}</label></li>
+							            <li class="completedAdvance"><span></span><label>{{zoneId[4]}}</label></li>
+							        </ul>
+							    </div>
+							    <div class="customClear"></div>
+							</div>
+                    </div>
+                    <div class="customClear"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
